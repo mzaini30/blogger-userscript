@@ -33,3 +33,20 @@
 // @connect     self
 // @connect     *
 // ==/UserScript==
+
+// buat pakai Svelte aja
+const elemen = `
+	<p>Keywords</p>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+`;
+
+const elemen_node = document.createElement("div");
+elemen_node.innerHTML = elemen;
+elemen_node.style.width = '20%'
+elemen_node.style.position = 'fixed'
+elemen_node.style.right = '0'
+elemen_node.style.top = '66px'
+elemen_node.style.backgroud = 'blue'
+document.body.appendChild(elemen_node);
+
+document.querySelector('#yDmH0d').style.width = '80%'

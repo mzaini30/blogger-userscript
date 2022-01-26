@@ -4,12 +4,16 @@
 	let jumlah_kata = 0
 	onMount(() => {
 		function run(){
-			let banyak_editable = document.querySelectorAll('.editable').length
-			let konten = document.querySelectorAll('.editable')[banyak_editable - 1].contentWindow.document.querySelector('.editable')
-			jumlah_kata = konten.innerText.split(/\s/).filter(x => x).length.toLocaleString('id')	
+			try {
+				let banyak_editable = document.querySelectorAll('.editable').length
+				let konten = document.querySelectorAll('.editable')[banyak_editable - 1].contentWindow.document.querySelector('.editable')
+				jumlah_kata = konten.innerText.split(/\s/).filter(x => x).length.toLocaleString('id')
+			} catch(error){
+				console.log(error)
+			}
 		}
 		run()
-		setInterval(run, 5000)
+		window.setInterval(run, 5000)
 	})
 </script>
 

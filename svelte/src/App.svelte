@@ -1,37 +1,21 @@
 <script>
-	let isi_keyword = ''
-	if (localStorage.isi_keyword) {
-		isi_keyword = localStorage.isi_keyword
-	}
-	$: if (isi_keyword){
-		localStorage.isi_keyword = isi_keyword
-	} else {
-		localStorage.isi_keyword = isi_keyword
-	}
+	import Keyword from './keyword.svelte'
+	import Jumlah_kata from './jumlah-kata.svelte'
 </script>
 
-<section class="bagian-keyword">
-	<p class="judul-keyword">Keyword</p>
-	<textarea class="textarea-keyword" bind:value={isi_keyword} placeholder="Masukkan list keyword" name="" id="" cols="30" rows="10"></textarea>
-</section>
+<aside class="aplikasi">
+	<Keyword/>
+	<Jumlah_kata/>
+</aside>
 
-<style windi:safelist:global>
+<style>
 	:root {
 		--oren: #ff5722;
 	}
-	* {
+	.aplikasi :global(*) {
 		@apply m-0 p-0 focus:outline-none;
 		box-sizing: border-box;
 		font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
 		color: rgba(0,0,0,0.54);
-	}
-	.judul-keyword {
-		@apply text-center pb-2
-	}
-	.textarea-keyword {
-		@apply w-full p-2 text-base border border-$oren focus:border-2;
-	}
-	.bagian-keyword {
-		@apply p-2
 	}
 </style>

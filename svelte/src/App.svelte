@@ -29,7 +29,7 @@
 		@apply text-center pb-2
 	}
 	.textarea-keyword {
-		@apply w-full p-2 text-base border border-$oren;
+		@apply w-full p-2 text-base border border-$oren focus:border-2;
 	}
 	.bagian-keyword {
 		@apply p-2

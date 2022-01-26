@@ -16,16 +16,20 @@
 </section>
 
 <style windi:safelist:global>
+	:root {
+		--oren: #ff5722;
+	}
 	* {
 		@apply m-0 p-0 focus:outline-none;
 		box-sizing: border-box;
-		font-family: 'Comic Sans MS', cursive;
+		font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+		color: rgba(0,0,0,0.54);
 	}
 	.judul-keyword {
-		@apply text-center pb-2 text-violet-500;
+		@apply text-center pb-2
 	}
 	.textarea-keyword {
-		@apply w-full p-2 text-base focus:outline-green-500;
+		@apply w-full p-2 text-base border border-$oren;
 	}
 	.bagian-keyword {
 		@apply p-2

@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        Blogger Userscript
-// @version     0.0.5
+// @version     0.1.0
 // @date        2022-01-26
 // @author      Zen
 // @description Tools yang akan memudahkan nulis di Blogger
-// @homepage    https://www.cuapcuap.my.id
+// @homepage    https://www.cuapcuap.my.id/2022/01/plugin-blogger.html
 // @downloadURL https://github.com/mzaini30/blogger-userscript/raw/master/app.user.js
 // @include     https://www.blogger.com/*
 // @run-at      document-end

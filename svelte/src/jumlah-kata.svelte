@@ -6,11 +6,7 @@
 		function run(){
 			let banyak_editable = document.querySelectorAll('.editable').length
 			let konten = document.querySelectorAll('.editable')[banyak_editable - 1].contentWindow.document.querySelector('.editable')
-			function ambil_jumlah_kata(){
-				jumlah_kata = konten.innerText.split(/\s/).filter(x => x).length.toLocaleString('id')	
-			}
-			ambil_jumlah_kata()
-			konten.addEventListener('keyup', ambil_jumlah_kata)
+			jumlah_kata = konten.innerText.split(/\s/).filter(x => x).length.toLocaleString('id')	
 		}
 		run()
 		setInterval(run, 5000)

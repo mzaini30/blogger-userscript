@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Blogger Userscript
-// @version     0.3.0
+// @version     0.3.1
 // @date        2022-01-27
 // @author      Zen
 // @description Tools yang akan memudahkan nulis di Blogger
@@ -78,11 +78,19 @@ setTimeout(tambah_aplikasi, 3000)
 setInterval(cek, 5000)
 
 function cek_karakter_judul(){
+	// 20-70 karakter
 	try {
 		let panjang_input = 0
 		let banyak_input = document.querySelectorAll('[aria-label="Judul"]').length
 		panjang_input = document.querySelectorAll('[aria-label="Judul"]')[banyak_input - 1].value.split('').length
-		document.querySelectorAll('[aria-label="Judul"] + [jsname="YRMmle"]')[banyak_input - 1].innerText = `Judul (${panjang_input} karakter)`
+
+		let tulis = ''
+		if (panjang_input >= 19 && panjang_input <= 70) {
+			tulis = `Judul (${panjang_input} karakter)`
+		} else {
+			tulis = `<span class="merah">Judul (${panjang_input} karakter)</span>`
+		}
+		document.querySelectorAll('[aria-label="Judul"] + [jsname="YRMmle"]')[banyak_input - 1].innerHTML = tulis
 	} catch(error){
 		console.log(error)
 	}

@@ -1,11 +1,13 @@
 <script>
 	import Keyword from './keyword.svelte'
 	import Jumlah_kata from './jumlah-kata.svelte'
+	import Credit from './credit.svelte'
 </script>
 
 <aside class="aplikasi">
 	<Keyword/>
 	<Jumlah_kata/>
+	<Credit/>
 </aside>
 
 <style>

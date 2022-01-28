@@ -7,7 +7,7 @@
 <aside class="aplikasi">
 	<Keyword/>
 	<Jumlah_kata/>
-	<p class="pengumuman-snippet-kode">Tekan <strong>k</strong> untuk membuka fitur Snippet Kode</p>
+	<p class="pengumuman-snippet-kode">Tekan <strong>Alt k</strong> untuk membuka fitur Snippet Kode</p>
 	<Credit/>
 </aside>
 
@@ -22,6 +22,6 @@
 		color: rgba(0,0,0,0.54);
 	}
 	.pengumuman-snippet-kode {
-		@apply pb-2 text-center text-sm
+		@apply p-2 pt-0 text-center text-sm
 	}
 </style>

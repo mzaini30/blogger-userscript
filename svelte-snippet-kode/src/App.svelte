@@ -27,7 +27,8 @@
 	}
 
 	function cek(x){
-		if (x.key == 'k') {
+		console.log(x)
+		if (x.key == 'k' && x.altKey == true) {
 			app = true
 		}
 		if (x.key == 'Escape') {

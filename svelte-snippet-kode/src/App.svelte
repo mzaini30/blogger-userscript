@@ -114,4 +114,8 @@
 	.hasilnya {
 		@apply select-all w-90 h-70 overflow-auto
 	}
+
+	pre {
+		white-space: pre-wrap;
+	}
 </style>

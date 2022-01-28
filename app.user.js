@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name        Blogger Userscript
-// @version     1.0.1
+// @name        Plugin Blogger
+// @version     1.0.2
 // @date        2022-01-28
 // @author      Zen
 // @description Tools yang akan memudahkan nulis di Blogger

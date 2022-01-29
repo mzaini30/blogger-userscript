@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name        Plugin Blogger
-// @version     1.0.2
-// @date        2022-01-28
+// @version     2.0.0
+// @date        2022-01-29
 // @author      Zen
 // @description Tools yang akan memudahkan nulis di Blogger
 // @homepage    https://www.cuapcuap.my.id/2022/01/plugin-blogger.html
 // @downloadURL https://github.com/mzaini30/blogger-userscript/raw/master/app.user.js
 // @include     https://www.blogger.com/*
+// @include     https://draft.blogger.com/*
 // @run-at      document-end
 // @grant       GM_listValues
 // @grant       GM_setValue
@@ -80,7 +81,7 @@ function cek(){
 	const editor_blogger = document.querySelector('#yDmH0d')
 	const tools = document.querySelector('.app')
 
-	if (linknya.includes('https://www.blogger.com/blog/post/edit/')) {
+	if (linknya.includes('/blog/post/edit/')) {
 		// di editor
 		editor_blogger.style.width = lebar_editor_blogger
 		editor_blogger.style.insetInlineStart = lebar_tools

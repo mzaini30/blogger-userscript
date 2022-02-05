@@ -1,6 +1,6 @@
 <script>
 	import hljs from 'highlight.js'
-	import 'highlight.js/styles/github.css'
+	import 'highlight.js/styles/github-dark.css'
 
 	let app = false
 	let bahasa = ''
@@ -52,6 +52,14 @@
 				<p class="pt-3">Kodenya</p>
 				<textarea required name="" bind:value={kode} id="" cols="30" rows="10"></textarea>
 				<button class="olah" on:click={olah}>Olah</button>
+				<p class="pt-3">CSS yang Direkomendasikan</p>
+				<pre class="pt-3 block css-rekomendasi"><code>pre code &lcub;
+	display: block;
+	overflow-x: auto;
+	padding: 3px 5px;
+	color: #c9d1d9;
+	background: #0d1117;
+&rcub;</code></pre>
 			</section>
 			<section>
 				<p>Hasilnya</p>
@@ -79,6 +87,12 @@
 		cursor: pointer;
 		@apply outline-none border-none;
 	}
+	.css-rekomendasi {
+		@apply bg-dark-500 p-3 select-all
+	}
+	.css-rekomendasi code {
+		@apply text-white
+	}
 	:root {
 		--oren: #ff5722;
 	}
@@ -89,7 +103,7 @@
 		/*color: rgba(0,0,0,0.54);*/
 	}
 	.latar {
-		@apply w-screen h-screen bg-black/50 backdrop-filter backdrop-blur fixed top-0 left-0 p-5 pt-25 justify-center flex;
+		@apply w-screen h-screen bg-black/50 backdrop-filter backdrop-blur fixed top-0 left-0 p-5 pt-15 justify-center flex;
 		z-index: 100;
 	}
 
@@ -113,7 +127,7 @@
 	}
 
 	.hasilnya {
-		@apply select-all w-90 h-70 overflow-auto
+		@apply select-all w-90 h-120 overflow-auto
 	}
 
 	pre {

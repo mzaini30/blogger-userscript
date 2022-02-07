@@ -127,7 +127,7 @@
 	}
 
 	.hasilnya {
-		@apply select-all w-90 h-120 overflow-auto
+		@apply select-all overflow-auto
 	}
 
 	pre {

@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Plugin Blogger
-// @version     2.2.0
+// @version     2.3.0
 // @date        2022-02-07
 // @author      Zen
 // @description Tools yang akan memudahkan nulis di Blogger
@@ -31,6 +31,7 @@
 // @grant       GM.xmlHttpRequest
 // ==/UserScript==
 
+// snippet kode
 const style_snippet_kode = document.createElement('style')
 style_snippet_kode.innerHTML = `.block.svelte-c2ks2f.svelte-c2ks2f{display:block}.pt-3.svelte-c2ks2f.svelte-c2ks2f{padding-top:0.75rem}button.svelte-c2ks2f.svelte-c2ks2f{font-family:inherit;font-size:100%;line-height:1.15;margin:0;padding:0;line-height:inherit;color:inherit;text-transform:none;-webkit-appearance:button;background-color:transparent;background-image:none;cursor:pointer;border-style:none;outline:2px solid transparent;outline-offset:2px}.css-rekomendasi.svelte-c2ks2f.svelte-c2ks2f{--tw-bg-opacity:1;background-color:rgba(31, 31, 31, var(--tw-bg-opacity));padding:0.75rem;-webkit-user-select:all;-moz-user-select:all;-ms-user-select:all;user-select:all}.css-rekomendasi.svelte-c2ks2f code.svelte-c2ks2f{--tw-text-opacity:1;color:rgba(255, 255, 255, var(--tw-text-opacity))}:root{--oren:#ff5722}.svelte-c2ks2f.svelte-c2ks2f{margin:0px;padding:0px;--tw-text-opacity:1;color:rgba(75, 85, 99, var(--tw-text-opacity));box-sizing:border-box;font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif}.svelte-c2ks2f.svelte-c2ks2f:focus{outline:2px solid transparent;outline-offset:2px}.latar.svelte-c2ks2f.svelte-c2ks2f{--tw-bg-opacity:0.5;background-color:rgba(0, 0, 0, var(--tw-bg-opacity));display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;height:100vh;padding:1.25rem;padding-top:3.75rem;position:fixed;top:0px;left:0px;width:100vw;--tw-backdrop-blur:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-brightness:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-contrast:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-grayscale:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-hue-rotate:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-invert:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-opacity:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-saturate:var(--tw-empty,/*!*/ /*!*/);--tw-backdrop-sepia:var(--tw-empty,/*!*/ /*!*/);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);--tw-backdrop-blur:blur(8px);z-index:100}.aplikasi.svelte-c2ks2f.svelte-c2ks2f{--tw-bg-opacity:1;background-color:rgba(255, 255, 255, var(--tw-bg-opacity));--tw-border-opacity:1;border-color:rgba(0, 0, 0, var(--tw-border-opacity));border-width:3px;display:-ms-grid;display:grid;height:-webkit-min-content;height:-moz-min-content;height:min-content;padding:0.75rem;grid-gap:0.75rem;gap:0.75rem;grid-template-columns:repeat(2, minmax(0, 1fr));box-shadow:10px 10px 0 0 black}input.svelte-c2ks2f.svelte-c2ks2f,textarea.svelte-c2ks2f.svelte-c2ks2f{--tw-border-opacity:1;border-color:rgba(0, 0, 0, var(--tw-border-opacity));border-radius:0.25rem;border-width:2px;padding:0.5rem;width:100%}p.svelte-c2ks2f.svelte-c2ks2f{padding-bottom:0.25rem}.olah.svelte-c2ks2f.svelte-c2ks2f{background-color:var(--oren);border-radius:0.25rem;cursor:pointer;margin-top:0.5rem;padding-left:1.75rem;padding-right:1.75rem;padding-top:0.5rem;padding-bottom:0.5rem;--tw-text-opacity:1;color:rgba(255, 255, 255, var(--tw-text-opacity));-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:-webkit-min-content;width:-moz-min-content;width:min-content;transition:.1s}.olah.svelte-c2ks2f.svelte-c2ks2f:hover,.olah.svelte-c2ks2f.svelte-c2ks2f:focus{box-shadow:5px 5px 0 0 black}.hasilnya.svelte-c2ks2f.svelte-c2ks2f{height:30rem;overflow:auto;-webkit-user-select:all;-moz-user-select:all;-ms-user-select:all;user-select:all;width:22.5rem}pre.svelte-c2ks2f.svelte-c2ks2f{white-space:pre-wrap}pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
   Theme: GitHub Dark
@@ -53,6 +54,7 @@ document.body.appendChild(tools_snippet_kode);
 const lebar_tools = '15%'
 const lebar_editor_blogger = '85%'
 
+// sidebar app
 function tambah_aplikasi() {
 	const editor_blogger = document.querySelector("#yDmH0d")
 	editor_blogger.style.width = lebar_editor_blogger;
@@ -73,7 +75,7 @@ function tambah_aplikasi() {
 	stylenya.innerHTML = `:root{--oren:#ff5722}.aplikasi.svelte-13gitsr *{margin:0px;padding:0px;box-sizing:border-box;font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;color:rgba(0,0,0,0.54)}.aplikasi.svelte-13gitsr *:focus{outline:2px solid transparent;outline-offset:2px}.pengumuman-snippet-kode.svelte-13gitsr{font-size:0.875rem;line-height:1.25rem;padding:0.5rem;padding-top:0px;text-align:center}.judul-keyword.svelte-8qzuhk{padding-bottom:0.5rem;text-align:center}.textarea-keyword.svelte-8qzuhk{border-color:var(--oren);border-width:1px;font-size:1rem;line-height:1.5rem;padding:0.5rem;width:100%}.textarea-keyword.svelte-8qzuhk:focus{border-width:2px}.bagian-keyword.svelte-8qzuhk{padding:0.5rem}.word-counter.svelte-1mplcic{padding-bottom:0.5rem;text-align:center}.merah{--tw-text-opacity:1 !important;color:rgba(239, 68, 68, var(--tw-text-opacity)) !important}.credit.svelte-lr6yxc{font-size:0.875rem;line-height:1.25rem;padding-bottom:0.5rem;padding-left:0.25rem;padding-right:0.25rem;position:absolute;bottom:0px;left:0px;text-align:center;width:100%}`
 	document.body.appendChild(stylenya)
 
-	!function(){"use strict";function t(){}function e(t){return t()}function n(){return Object.create(null)}function o(t){t.forEach(e)}function r(t){return"function"==typeof t}function c(t,e){return t!=t?e==e:t!==e||t&&"object"==typeof t||"function"==typeof t}function u(t,e){t.appendChild(e)}function l(t,e,n){t.insertBefore(e,n||null)}function i(t){t.parentNode.removeChild(t)}function s(t){return document.createElement(t)}function a(t){return document.createTextNode(t)}function d(){return a(" ")}function f(t,e,n){null==n?t.removeAttribute(e):t.getAttribute(e)!==n&&t.setAttribute(e,n)}function p(t,e){t.value=null==e?"":e}let $;function m(t){$=t}function g(t){(function(){if(!$)throw new Error("Function called outside component initialization");return $})().$$.on_mount.push(t)}const h=[],y=[],k=[],w=[],b=Promise.resolve();let x=!1;function _(t){k.push(t)}const v=new Set;let S=0;function A(){const t=$;do{for(;S<h.length;){const t=h[S];S++,m(t),E(t.$$)}for(m(null),h.length=0,S=0;y.length;)y.pop()();for(let t=0;t<k.length;t+=1){const e=k[t];v.has(e)||(v.add(e),e())}k.length=0}while(h.length);for(;w.length;)w.pop()();x=!1,v.clear(),m(t)}function E(t){if(null!==t.fragment){t.update(),o(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(_)}}const q=new Set;function L(t,e){t&&t.i&&(q.delete(t),t.i(e))}function O(t,e,n,o){if(t&&t.o){if(q.has(t))return;q.add(t),undefined.c.push((()=>{q.delete(t),o&&(n&&t.d(1),o())})),t.o(e)}}function T(t){t&&t.c()}function j(t,n,c,u){const{fragment:l,on_mount:i,on_destroy:s,after_update:a}=t.$$;l&&l.m(n,c),u||_((()=>{const n=i.map(e).filter(r);s?s.push(...n):o(n),t.$$.on_mount=[]})),a.forEach(_)}function z(t,e){const n=t.$$;null!==n.fragment&&(o(n.on_destroy),n.fragment&&n.fragment.d(e),n.on_destroy=n.fragment=null,n.ctx=[])}function C(t,e){-1===t.$$.dirty[0]&&(h.push(t),x||(x=!0,b.then(A)),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function N(e,r,c,u,l,s,a,d=[-1]){const f=$;m(e);const p=e.$$={fragment:null,ctx:null,props:s,update:t,not_equal:l,bound:n(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(r.context||(f?f.$$.context:[])),callbacks:n(),dirty:d,skip_bound:!1,root:r.target||f.$$.root};a&&a(p.root);let g=!1;if(p.ctx=c?c(e,r.props||{},((t,n,...o)=>{const r=o.length?o[0]:n;return p.ctx&&l(p.ctx[t],p.ctx[t]=r)&&(!p.skip_bound&&p.bound[t]&&p.bound[t](r),g&&C(e,t)),n})):[],p.update(),g=!0,o(p.before_update),p.fragment=!!u&&u(p.ctx),r.target){if(r.hydrate){const t=function(t){return Array.from(t.childNodes)}(r.target);p.fragment&&p.fragment.l(t),t.forEach(i)}else p.fragment&&p.fragment.c();r.intro&&L(e.$$.fragment),j(e,r.target,r.anchor,r.customElement),A()}m(f)}class M{$destroy(){z(this,1),this.$destroy=t}$on(t,e){const n=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return n.push(e),()=>{const t=n.indexOf(e);-1!==t&&n.splice(t,1)}}$set(t){var e;this.$$set&&(e=t,0!==Object.keys(e).length)&&(this.$$.skip_bound=!0,this.$$set(t),this.$$.skip_bound=!1)}}function D(e){let n,o,r,c,a,$;return{c(){n=s("section"),o=s("p"),o.textContent="Keyword",r=d(),c=s("textarea"),f(o,"class","judul-keyword svelte-8qzuhk"),f(c,"class","textarea-keyword svelte-8qzuhk"),f(c,"placeholder","Masukkan list keyword"),f(c,"name",""),f(c,"id",""),f(c,"cols","30"),f(c,"rows","10"),f(n,"class","bagian-keyword svelte-8qzuhk")},m(t,i){var s,d,f,m;l(t,n,i),u(n,o),u(n,r),u(n,c),p(c,e[0]),a||(s=c,d="input",f=e[1],s.addEventListener(d,f,m),$=()=>s.removeEventListener(d,f,m),a=!0)},p(t,[e]){1&e&&p(c,t[0])},i:t,o:t,d(t){t&&i(n),a=!1,$()}}}function K(t,e,n){let o="";return localStorage.isi_keyword&&(o=localStorage.isi_keyword),t.$$.update=()=>{1&t.$$.dirty&&(localStorage.isi_keyword=o||o)},[o,function(){o=this.value,n(0,o)}]}class B extends M{constructor(t){super(),N(this,t,K,D,c,{})}}function F(e){let n,o,r,c,d=e[0].toLocaleString("id")+"";return{c(){n=s("section"),o=a(d),r=a(" kata"),f(n,"class",c="word-counter "+(e[0]<300?"merah":null)+" svelte-1mplcic")},m(t,e){l(t,n,e),u(n,o),u(n,r)},p(t,[e]){1&e&&d!==(d=t[0].toLocaleString("id")+"")&&function(t,e){e=""+e,t.wholeText!==e&&(t.data=e)}(o,d),1&e&&c!==(c="word-counter "+(t[0]<300?"merah":null)+" svelte-1mplcic")&&f(n,"class",c)},i:t,o:t,d(t){t&&i(n)}}}function H(t,e,n){let o=0;return g((()=>{function t(){try{let t=document.querySelectorAll(".editable").length,e=document.querySelectorAll(".editable")[t-1].contentWindow.document.querySelector(".editable");n(0,o=e.innerText.split(/\s/).filter((t=>t)).length)}catch(t){console.log(t)}}t(),window.setInterval(t,5e3)})),[o]}class I extends M{constructor(t){super(),N(this,t,H,F,c,{})}}function P(e){let n;return{c(){n=s("section"),n.textContent="Dukung developer dengan donasi via OVO/DANA ke 0815-4514-3654",f(n,"class","credit svelte-lr6yxc")},m(t,e){l(t,n,e)},p:t,i:t,o:t,d(t){t&&i(n)}}}class V extends M{constructor(t){super(),N(this,t,null,P,c,{})}}function W(e){let n,o,r,c,a,p,$,m,g;return o=new B({}),c=new I({}),m=new V({}),{c(){n=s("aside"),T(o.$$.fragment),r=d(),T(c.$$.fragment),a=d(),p=s("p"),p.innerHTML="Tekan <strong>Alt k</strong> untuk membuka fitur Snippet Kode",$=d(),T(m.$$.fragment),f(p,"class","pengumuman-snippet-kode svelte-13gitsr"),f(n,"class","aplikasi svelte-13gitsr")},m(t,e){l(t,n,e),j(o,n,null),u(n,r),j(c,n,null),u(n,a),u(n,p),u(n,$),j(m,n,null),g=!0},p:t,i(t){g||(L(o.$$.fragment,t),L(c.$$.fragment,t),L(m.$$.fragment,t),g=!0)},o(t){O(o.$$.fragment,t),O(c.$$.fragment,t),O(m.$$.fragment,t),g=!1},d(t){t&&i(n),z(o),z(c),z(m)}}}new class extends M{constructor(t){super(),N(this,t,null,W,c,{})}}({target:document.querySelector(".app")})}();
+	!function(){"use strict";function t(){}function e(t){return t()}function n(){return Object.create(null)}function o(t){t.forEach(e)}function r(t){return"function"==typeof t}function c(t,e){return t!=t?e==e:t!==e||t&&"object"==typeof t||"function"==typeof t}function u(t,e){t.appendChild(e)}function i(t,e,n){t.insertBefore(e,n||null)}function l(t){t.parentNode.removeChild(t)}function s(t){return document.createElement(t)}function a(t){return document.createTextNode(t)}function d(){return a(" ")}function f(t,e,n){null==n?t.removeAttribute(e):t.getAttribute(e)!==n&&t.setAttribute(e,n)}function p(t,e){t.value=null==e?"":e}let m;function $(t){m=t}function g(t){(function(){if(!m)throw new Error("Function called outside component initialization");return m})().$$.on_mount.push(t)}const h=[],k=[],y=[],b=[],w=Promise.resolve();let x=!1;function _(t){y.push(t)}const v=new Set;let S=0;function A(){const t=m;do{for(;S<h.length;){const t=h[S];S++,$(t),E(t.$$)}for($(null),h.length=0,S=0;k.length;)k.pop()();for(let t=0;t<y.length;t+=1){const e=y[t];v.has(e)||(v.add(e),e())}y.length=0}while(h.length);for(;b.length;)b.pop()();x=!1,v.clear(),$(t)}function E(t){if(null!==t.fragment){t.update(),o(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(_)}}const q=new Set;function T(t,e){t&&t.i&&(q.delete(t),t.i(e))}function L(t,e,n,o){if(t&&t.o){if(q.has(t))return;q.add(t),undefined.c.push((()=>{q.delete(t),o&&(n&&t.d(1),o())})),t.o(e)}}function O(t){t&&t.c()}function j(t,n,c,u){const{fragment:i,on_mount:l,on_destroy:s,after_update:a}=t.$$;i&&i.m(n,c),u||_((()=>{const n=l.map(e).filter(r);s?s.push(...n):o(n),t.$$.on_mount=[]})),a.forEach(_)}function z(t,e){const n=t.$$;null!==n.fragment&&(o(n.on_destroy),n.fragment&&n.fragment.d(e),n.on_destroy=n.fragment=null,n.ctx=[])}function C(t,e){-1===t.$$.dirty[0]&&(h.push(t),x||(x=!0,w.then(A)),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function M(e,r,c,u,i,s,a,d=[-1]){const f=m;$(e);const p=e.$$={fragment:null,ctx:null,props:s,update:t,not_equal:i,bound:n(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(r.context||(f?f.$$.context:[])),callbacks:n(),dirty:d,skip_bound:!1,root:r.target||f.$$.root};a&&a(p.root);let g=!1;if(p.ctx=c?c(e,r.props||{},((t,n,...o)=>{const r=o.length?o[0]:n;return p.ctx&&i(p.ctx[t],p.ctx[t]=r)&&(!p.skip_bound&&p.bound[t]&&p.bound[t](r),g&&C(e,t)),n})):[],p.update(),g=!0,o(p.before_update),p.fragment=!!u&&u(p.ctx),r.target){if(r.hydrate){const t=function(t){return Array.from(t.childNodes)}(r.target);p.fragment&&p.fragment.l(t),t.forEach(l)}else p.fragment&&p.fragment.c();r.intro&&T(e.$$.fragment),j(e,r.target,r.anchor,r.customElement),A()}$(f)}class N{$destroy(){z(this,1),this.$destroy=t}$on(t,e){const n=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return n.push(e),()=>{const t=n.indexOf(e);-1!==t&&n.splice(t,1)}}$set(t){var e;this.$$set&&(e=t,0!==Object.keys(e).length)&&(this.$$.skip_bound=!0,this.$$set(t),this.$$.skip_bound=!1)}}function D(e){let n,o,r,c,a,m;return{c(){n=s("section"),o=s("p"),o.textContent="Keyword",r=d(),c=s("textarea"),f(o,"class","judul-keyword svelte-8qzuhk"),f(c,"class","textarea-keyword svelte-8qzuhk"),f(c,"placeholder","Masukkan list keyword"),f(c,"name",""),f(c,"id",""),f(c,"cols","30"),f(c,"rows","10"),f(n,"class","bagian-keyword svelte-8qzuhk")},m(t,l){var s,d,f,$;i(t,n,l),u(n,o),u(n,r),u(n,c),p(c,e[0]),a||(s=c,d="input",f=e[1],s.addEventListener(d,f,$),m=()=>s.removeEventListener(d,f,$),a=!0)},p(t,[e]){1&e&&p(c,t[0])},i:t,o:t,d(t){t&&l(n),a=!1,m()}}}function H(t,e,n){let o="";return localStorage.isi_keyword&&(o=localStorage.isi_keyword),t.$$.update=()=>{1&t.$$.dirty&&(localStorage.isi_keyword=o||o)},[o,function(){o=this.value,n(0,o)}]}class K extends N{constructor(t){super(),M(this,t,H,D,c,{})}}function B(e){let n,o,r,c,d=e[0].toLocaleString("id")+"";return{c(){n=s("section"),o=a(d),r=a(" kata"),f(n,"class",c="word-counter "+(e[0]<300?"merah":null)+" svelte-1mplcic")},m(t,e){i(t,n,e),u(n,o),u(n,r)},p(t,[e]){1&e&&d!==(d=t[0].toLocaleString("id")+"")&&function(t,e){e=""+e,t.wholeText!==e&&(t.data=e)}(o,d),1&e&&c!==(c="word-counter "+(t[0]<300?"merah":null)+" svelte-1mplcic")&&f(n,"class",c)},i:t,o:t,d(t){t&&l(n)}}}function F(t,e,n){let o=0;return g((()=>{function t(){try{let t=document.querySelectorAll(".editable").length,e=document.querySelectorAll(".editable")[t-1].contentWindow.document.querySelector(".editable");n(0,o=e.innerText.split(/\s/).filter((t=>t)).length)}catch(t){console.log(t)}}t(),window.setInterval(t,5e3)})),[o]}class I extends N{constructor(t){super(),M(this,t,F,B,c,{})}}function P(e){let n;return{c(){n=s("section"),n.textContent="Dukung developer dengan donasi via OVO/DANA ke 0815-4514-3654",f(n,"class","credit svelte-lr6yxc")},m(t,e){i(t,n,e)},p:t,i:t,o:t,d(t){t&&l(n)}}}class V extends N{constructor(t){super(),M(this,t,null,P,c,{})}}function W(e){let n,o,r,c,a,p,m,$,g,h,k;return o=new K({}),c=new I({}),h=new V({}),{c(){n=s("aside"),O(o.$$.fragment),r=d(),O(c.$$.fragment),a=d(),p=s("p"),p.innerHTML="Tekan <strong>Alt k</strong> untuk membuka fitur Snippet Kode",m=d(),$=s("p"),$.innerHTML="Tekan <strong>Alt l</strong> untuk membuka fitur Thumbnail Link",g=d(),O(h.$$.fragment),f(p,"class","pengumuman-snippet-kode svelte-13gitsr"),f($,"class","pengumuman-snippet-kode svelte-13gitsr"),f(n,"class","aplikasi svelte-13gitsr")},m(t,e){i(t,n,e),j(o,n,null),u(n,r),j(c,n,null),u(n,a),u(n,p),u(n,m),u(n,$),u(n,g),j(h,n,null),k=!0},p:t,i(t){k||(T(o.$$.fragment,t),T(c.$$.fragment,t),T(h.$$.fragment,t),k=!0)},o(t){L(o.$$.fragment,t),L(c.$$.fragment,t),L(h.$$.fragment,t),k=!1},d(t){t&&l(n),z(o),z(c),z(h)}}}new class extends N{constructor(t){super(),M(this,t,null,W,c,{})}}({target:document.querySelector(".app")})}();
 
 }
 function cek(){
@@ -118,3 +120,130 @@ function cek_karakter_judul(){
 }
 cek_karakter_judul()
 setInterval(cek_karakter_judul, 5000)
+
+// thumbnail link
+escapeHTMLPolicy = trustedTypes.createPolicy("forceInner", {
+  createHTML: (to_escape) => to_escape
+})
+
+const el_thumbnail = document.createElement('div')
+el_thumbnail.innerHTML = escapeHTMLPolicy.createHTML(`
+  <style>
+    .thumbnail-link {
+      display: none;
+    }
+    .thumbnail-link, .thumbnail-link * {
+      box-sizing: border-box;
+      tab-size: 2;
+    }
+    .thumbnail-link {
+      z-index: 9999;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+    }
+    .thumbnail-link .wadah {
+      width: 600px;
+      margin: 60px auto;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 10px 10px 0 0 black;
+    }
+    .thumbnail-link input {
+      width: 100%;
+      padding: 10px;
+    }
+    .thumbnail-link form {
+      margin-bottom: 15px;
+    }
+    .thumbnail-link .hasil {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+    .thumbnail-link pre {
+      width: 100%;
+      overflow: auto;
+      user-select: all;
+    }
+  </style> 
+
+  <div class="latar thumbnail-link">
+    <div class="wadah">
+      <form action="">
+        <input type="url" placeholder="Masukkan link" required />
+      </form>
+      <div class="hasil">
+        <div class="html">
+          <a href="/" style="max-width: 600px;display: block;margin: auto;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 5px;overflow: hidden;box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);text-decoration: none !important;color: inherit;" class="preview-link">
+            <img style="width: 100%;aspect-ratio: 16 / 9;object-fit: cover;" src="https://i.postimg.cc/wM1Hzmqk/icon.jpg" alt="Judul gambar" />
+            <span class="keterangan" style="padding: 10px;display: block;">
+              <span class="judul" style="display: block;padding-bottom: 5px;font-size: 14px;font-weight: bold;">Hello World</span>
+              <span class="deskripsi" style="display: block;color: gray;font-size: 12px;">Lorem ipsum dolor sit amet</span>
+            </span>
+          </a>
+        </div>
+        <pre>&lt;a href="/" style="max-width: 600px;display: block;margin: auto;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 5px;overflow: hidden;box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);text-decoration: none !important;color: inherit;" class="preview-link"&gt;
+    &lt;img style="width: 100%;aspect-ratio: 16 / 9;object-fit: cover;" src="gambar" alt="judul" /&gt;
+    &lt;span class="keterangan" style="padding: 10px;display: block;"&gt;
+      &lt;span class="judul" style="display: block;padding-bottom: 5px;font-size: 14px;font-weight: bold;"&gt;judul&lt;/span&gt;
+      &lt;span class="deskripsi" style="display: block;color: gray;font-size: 12px;"&gt;deskripsi&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/a&gt;</pre>
+      </div>
+    </div>
+  </div>
+`)
+document.body.appendChild(el_thumbnail)
+
+function z(x){
+  return document.querySelector(x)
+}
+
+window.addEventListener('keyup', x => {
+  if (x.key == 'l' && x.altKey == true) {
+    z('.thumbnail-link').style.display = 'block'
+    z('.thumbnail-link input').focus()
+  }
+  if (x.key == 'Escape') {
+    z('.thumbnail-link').style.display = 'none'
+  }
+})
+
+z('.thumbnail-link form').addEventListener('submit', el => {
+  const link = z('.thumbnail-link input').value
+  const anti_cors = 'https://scrappy-php.herokuapp.com/?url='
+
+  async function dapatkan(){
+    let isi_situs = await fetch(`${anti_cors}${encodeURIComponent(link)}`)
+    isi_situs = await isi_situs.text()
+
+    const parser = new DOMParser
+    const dom = parser.parseFromString(isi_situs, 'text/html')
+
+    let thumbnail = {}
+
+    if (isi_situs){
+      thumbnail.judul = dom.title ?? 'Hello World'
+      thumbnail.deskripsi = dom.querySelector('meta[name="description"]').content ?? 'Lorem ipsum dolor sit amet'
+      thumbnail.gambar = dom.querySelector('meta[property="og:image"]').content ?? 'https://i.postimg.cc/wM1Hzmqk/icon.jpg'
+
+      let hasilnya = `<a href="${link}" style="max-width: 600px;display: block;margin: auto;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 5px;overflow: hidden;box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);text-decoration: none !important;color: inherit;" class="preview-link">
+<img style="width: 100%;aspect-ratio: 16 / 9;object-fit: cover;" src="${anti_cors}${encodeURIComponent(thumbnail.gambar)}" alt="${thumbnail.judul}" />
+<span class="keterangan" style="padding: 10px;display: block;">
+  <span class="judul" style="display: block;padding-bottom: 5px;font-size: 14px;font-weight: bold;">${thumbnail.judul}</span>
+  <span class="deskripsi" style="display: block;color: gray;font-size: 12px;">${thumbnail.deskripsi}</span>
+</span>
+</a>`
+
+      z('.thumbnail-link .html').innerHTML = hasilnya
+      z('.thumbnail-link pre').innerText = hasilnya
+    }
+  }
+  dapatkan()
+  el.preventDefault()
+})

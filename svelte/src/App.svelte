@@ -8,6 +8,7 @@
 	<Keyword/>
 	<Jumlah_kata/>
 	<p class="pengumuman-snippet-kode">Tekan <strong>Alt k</strong> untuk membuka fitur Snippet Kode</p>
+	<p class="pengumuman-snippet-kode">Tekan <strong>Alt l</strong> untuk membuka fitur Thumbnail Link</p>
 	<Credit/>
 </aside>
 
